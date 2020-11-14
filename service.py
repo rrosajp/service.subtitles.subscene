@@ -350,7 +350,7 @@ def search_manual(searchstr, languages, filename):
 
 
 def search_filename(filename, languages):
-    title, year = str(xbmc.getCleanMovieTitle(filename))
+    title, year = xbmc.getCleanMovieTitle(filename)
     log(__name__, "clean title: \"%s\" (%s)" % (title, year))
     try:
         yearval = int(year)
